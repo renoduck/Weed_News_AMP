@@ -3,7 +3,6 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-	<script custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js" async></script>
 	<?php do_action( 'amp_post_template_head', $this ); ?>
 	<style amp-custom>
 		<?php $this->load_parts( array( 'style' ) ); ?>
@@ -26,11 +25,13 @@
 	<div class="amp-wp-article-content">
 		<?php echo $this->get( 'post_amp_content' ); // amphtml content; no kses ?>
 	</div>
+
 	<footer class="amp-wp-article-footer">
 		<?php $this->load_parts( apply_filters( 'amp_post_article_footer_meta', array( 'meta-taxonomy', 'meta-comments-link' ) ) ); ?>
 	</footer>
 
 </article>
+
 <?php $this->load_parts( array( 'footer' ) ); ?>
 
 <?php do_action( 'amp_post_template_footer', $this ); ?>
